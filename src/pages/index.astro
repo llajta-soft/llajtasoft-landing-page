@@ -15,14 +15,14 @@ import Carrusel from "../components/Carrusel.astro";
 
   <body class="">
     <div id="large-header" class="cover overflow-hidden relative h-screen">
-      <Header />
+      <Header  />
       <canvas id="demo-canvas" class=""> </canvas>
 
       <div class="absolute z-10 left-0 top-30 w-full text-white px-2 md:px-16">
         <div class="grid md:grid-cols-2 md:gap-2">
           <div class="md:order-2 py-4 flex items-center justify-center">
             <div class="">
-              <AnimateLogos />
+              <AnimateLogos client:only />
             </div>
           </div>
 
@@ -62,7 +62,7 @@ import Carrusel from "../components/Carrusel.astro";
         personalizadas en desarrollo web, móvil y de escritorio. ¡Déjanos
         ayudarte a crecer!
       </p>
-      <Carrusel />
+      <Carrusel client:only />
     </section>
 
     <!-- Nuestros Servicios -->
