@@ -1,0 +1,93 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-zinc-950 text-white">
+		<Header />
+		<main class="px-6 py-12">
+			<!-- ¿Quiénes Somos? -->
+			<section class="text-center py-16 bg-zinc-950 text-white">
+				<h1 class="text-4xl font-bold mb-4">¿Quiénes Somos?</h1>
+				<p class="text-xl mb-8">En Llajtasoft, somos un equipo apasionado por transformar ideas en soluciones tecnológicas de alta calidad. Desde nuestra fundación, hemos crecido para convertirnos en un referente en el desarrollo de software a medida, especializado en Web, Móvil y Escritorio.</p>
+				<p class="text-xl mb-8">Nos impulsa la innovación, la excelencia y el deseo de hacer que cada cliente logre sus objetivos a través de la tecnología. ¡Acompáñanos en este viaje hacia el futuro!</p>
+			</section>
+
+			<!-- Nuestra Misión, Visión y Valores -->
+			<section class="bg-zinc-900 text-white py-16">
+				<div class="max-w-4xl mx-auto px-6">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl font-bold mb-4">Nuestra Misión</h2>
+						<p class="text-lg">Nuestro objetivo es ofrecer soluciones tecnológicas personalizadas, creativas y eficientes que ayuden a nuestros clientes a alcanzar sus metas de manera rápida y efectiva. En Llajtasoft, nos enfocamos en la innovación, adaptándonos constantemente a las últimas tendencias del mercado para brindar resultados sobresalientes.</p>
+					</div>
+
+					<div class="text-center mb-12">
+						<h2 class="text-3xl font-bold mb-4">Nuestra Visión</h2>
+						<p class="text-lg">Aspiramos a ser la empresa líder en soluciones de software a medida, con un equipo altamente capacitado que se mantiene a la vanguardia de las tecnologías más innovadoras. Queremos acompañar a nuestros clientes en cada etapa de su transformación digital, impulsando su éxito a través de nuestras soluciones.</p>
+					</div>
+
+					<div class="text-center mb-12">
+						<h2 class="text-3xl font-bold mb-4">Nuestros Valores</h2>
+						<ul class="text-lg space-y-4">
+							<li><strong>Innovación:</strong> Siempre buscamos la mejor manera de hacer las cosas, innovando en cada proyecto.</li>
+							<li><strong>Personalización:</strong> Nos enfocamos en las necesidades específicas de cada cliente para ofrecer soluciones únicas.</li>
+							<li><strong>Calidad:</strong> Cada proyecto es una oportunidad para entregar excelencia y asegurar la satisfacción total de nuestros clientes.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Nuestro Equipo -->
+			<section class="bg-zinc-900 text-white py-16">
+				<div class="max-w-4xl mx-auto px-6">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl font-bold mb-4">Nuestro Equipo</h2>
+						<p class="text-lg mb-8">Nuestro equipo está compuesto por expertos apasionados que trabajan incansablemente para ofrecer lo mejor en cada proyecto. Con un enfoque colaborativo, cada miembro aporta su experiencia y dedicación para que tus ideas se hagan realidad.</p>
+					</div>
+					
+					<div class="flex justify-center gap-12">
+						<div class="text-center">
+							<img src="/images/team-member-1.jpg" alt="Miembro del equipo 1" class="w-40 h-40 rounded-full mx-auto mb-4">
+							<h3 class="text-xl font-bold">Carlos Pérez</h3>
+							<p>Fundador & CEO</p>
+						</div>
+						<div class="text-center">
+							<img src="/images/team-member-2.jpg" alt="Miembro del equipo 2" class="w-40 h-40 rounded-full mx-auto mb-4">
+							<h3 class="text-xl font-bold">Ana Rodríguez</h3>
+							<p>Desarrolladora Senior</p>
+						</div>
+						<div class="text-center">
+							<img src="/images/team-member-3.jpg" alt="Miembro del equipo 3" class="w-40 h-40 rounded-full mx-auto mb-4">
+							<h3 class="text-xl font-bold">Luis García</h3>
+							<p>Diseñador UX/UI</p>
+						</div>
+					</div>
+
+					<div class="text-center mt-12">
+						<a href="/careers" class="inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-400 transition">Únete a nuestro equipo</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ¿Por qué Elegirnos? -->
+			<section class="text-center py-16 bg-zinc-800 text-white">
+				<h2 class="text-3xl font-bold mb-4">¿Por qué Elegirnos?</h2>
+				<p class="text-lg mb-8">Nos destacamos por ofrecer un enfoque totalmente personalizado para cada cliente, adaptándonos a sus necesidades específicas. Con experiencia en tecnologías líderes como React, Next.js, Flutter y Electron.js, garantizamos soluciones innovadoras, ágiles y de alta calidad.</p>
+				<ul class="text-lg space-y-4 mb-8">
+					<li><strong>Experiencia con tecnologías líderes:</strong> React, Next.js, Flutter y Electron.js.</li>
+					<li><strong>Enfoque personalizado:</strong> Cada cliente es único y le ofrecemos soluciones adaptadas a sus objetivos.</li>
+					<li><strong>Proceso ágil:</strong> Trabajamos de manera eficiente para entregarte resultados rápidos sin comprometer la calidad.</li>
+				</ul>
+				<a href="/contact" class="inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-400 transition">¡Descubre cómo podemos ayudarte a alcanzar tus metas!</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

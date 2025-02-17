@@ -1,0 +1,93 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-zinc-950 text-white">
+    <Header />
+    <main class="px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Introducción -->
+      <section class="text-center mb-16">
+        <h1 class="text-5xl sm:text-6xl font-semibold text-blue-500 mb-6">Estamos Listos para Ayudarte</h1>
+        <p class="text-xl sm:text-2xl max-w-3xl mx-auto mb-8">¿Tienes un proyecto en mente? Nos encantaría conocer tu idea y trabajar juntos para hacerla realidad. Contáctanos y hablemos sobre cómo podemos ayudarte a crecer.</p>
+      </section>
+
+      <!-- Formulario de Contacto -->
+      <section class="mb-16">
+        <form action="/submit-contact" method="POST" class="max-w-4xl mx-auto bg-zinc-900 p-8 rounded-lg shadow-xl">
+          <h2 class="text-3xl text-center font-semibold text-blue-500 mb-8">Envíanos un Mensaje</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex flex-col">
+              <label for="name" class="text-lg font-medium mb-2">Nombre</label>
+              <input type="text" id="name" name="name" class="bg-zinc-800 text-white p-4 rounded-lg" required />
+            </div>
+            <div class="flex flex-col">
+              <label for="email" class="text-lg font-medium mb-2">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="bg-zinc-800 text-white p-4 rounded-lg" required />
+            </div>
+          </div>
+          <div class="flex flex-col mt-6">
+            <label for="phone" class="text-lg font-medium mb-2">Teléfono</label>
+            <input type="tel" id="phone" name="phone" class="bg-zinc-800 text-white p-4 rounded-lg" />
+          </div>
+          <div class="flex flex-col mt-6">
+            <label for="company" class="text-lg font-medium mb-2">Empresa</label>
+            <input type="text" id="company" name="company" class="bg-zinc-800 text-white p-4 rounded-lg" />
+          </div>
+          <div class="flex flex-col mt-6">
+            <label for="message" class="text-lg font-medium mb-2">Mensaje Detallado</label>
+            <textarea id="message" name="message" class="bg-zinc-800 text-white p-4 rounded-lg h-32" required></textarea>
+          </div>
+          <button type="submit" class="bg-blue-500 text-white py-3 px-10 rounded-lg mt-8 w-full hover:bg-blue-400 transition duration-300">Enviar Mensaje</button>
+        </form>
+      </section>
+
+      <!-- Información de Contacto -->
+      <section class="text-center mb-16">
+        <h2 class="text-3xl font-semibold text-blue-500 mb-6">Otra Forma de Contactarnos</h2>
+        <p class="text-lg max-w-2xl mx-auto mb-4">Si prefieres hablar directamente con nosotros, aquí tienes más opciones:</p>
+        <p class="text-lg mb-4">Teléfono: <span class="font-semibold">+123 456 7890</span></p>
+        <p class="text-lg mb-4">Correo Electrónico: <span class="font-semibold">contacto@llajtasoft.com</span></p>
+        <p class="text-lg mb-4">Dirección: <span class="font-semibold">Av. Ejemplo 123, Ciudad, País</span></p>
+      </section>
+
+      <!-- Redes Sociales y WhatsApp -->
+      <section class="text-center mb-16">
+        <h2 class="text-3xl font-semibold text-blue-500 mb-6">Conéctate con Nosotros</h2>
+        <div class="flex justify-center space-x-8">
+          <a href="https://www.linkedin.com" target="_blank" class="text-blue-500 text-3xl hover:text-blue-400 transition duration-300">LinkedIn</a>
+          <a href="https://twitter.com" target="_blank" class="text-blue-500 text-3xl hover:text-blue-400 transition duration-300">Twitter</a>
+          <a href="https://instagram.com" target="_blank" class="text-blue-500 text-3xl hover:text-blue-400 transition duration-300">Instagram</a>
+        </div>
+        <a href="https://wa.me/+1234567890" target="_blank" class="bg-blue-500 text-white py-3 px-10 rounded-lg inline-block text-lg font-semibold hover:bg-blue-400 mt-8">¡Contáctanos por WhatsApp ahora!</a>
+      </section>
+
+      <!-- FAQ (Opcional) -->
+      <section class="bg-zinc-900 py-16 text-center">
+        <h2 class="text-4xl font-semibold text-blue-500 mb-8">Preguntas Frecuentes</h2>
+        <div class="space-y-6 max-w-3xl mx-auto">
+          <div>
+            <h3 class="text-2xl font-semibold text-blue-500">¿Cuánto tiempo toma el desarrollo de un proyecto?</h3>
+            <p class="text-lg">El tiempo varía dependiendo de la complejidad, pero normalmente entre 2 y 6 meses.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-blue-500">¿Cuáles son los costos de los servicios?</h3>
+            <p class="text-lg">El costo depende del tipo de servicio y los requisitos específicos. Contáctanos para una cotización personalizada.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-blue-500">¿Puedo hacer cambios después de que el proyecto esté finalizado?</h3>
+            <p class="text-lg">Sí, ofrecemos soporte post-entrega para ajustes y mejoras continuas.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
