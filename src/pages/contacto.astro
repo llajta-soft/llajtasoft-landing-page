@@ -10,7 +10,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-zinc-950 text-white">
+  <body class="bg-gray-950 text-white">
     <Header />
     <main class="px-4 sm:px-6 lg:px-8 py-16">
       <!-- Introducción -->
@@ -21,29 +21,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
       <!-- Formulario de Contacto -->
       <section class="mb-16">
-        <form action="/submit-contact" method="POST" class="max-w-4xl mx-auto bg-zinc-900 p-8 rounded-lg shadow-xl">
+        <form action="/submit-contact" method="POST" class="max-w-4xl mx-auto bg-gray-900 p-8 rounded-lg shadow-xl">
           <h2 class="text-3xl text-center font-semibold text-blue-500 mb-8">Envíanos un Mensaje</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div class="flex flex-col">
               <label for="name" class="text-lg font-medium mb-2">Nombre</label>
-              <input type="text" id="name" name="name" class="bg-zinc-800 text-white p-4 rounded-lg" required />
+              <input type="text" id="name" name="name" class="bg-gray-800 text-white p-4 rounded-lg" required />
             </div>
             <div class="flex flex-col">
               <label for="email" class="text-lg font-medium mb-2">Correo Electrónico</label>
-              <input type="email" id="email" name="email" class="bg-zinc-800 text-white p-4 rounded-lg" required />
+              <input type="email" id="email" name="email" class="bg-gray-800 text-white p-4 rounded-lg" required />
             </div>
           </div>
           <div class="flex flex-col mt-6">
             <label for="phone" class="text-lg font-medium mb-2">Teléfono</label>
-            <input type="tel" id="phone" name="phone" class="bg-zinc-800 text-white p-4 rounded-lg" />
+            <input type="tel" id="phone" name="phone" class="bg-gray-800 text-white p-4 rounded-lg" />
           </div>
           <div class="flex flex-col mt-6">
             <label for="company" class="text-lg font-medium mb-2">Empresa</label>
-            <input type="text" id="company" name="company" class="bg-zinc-800 text-white p-4 rounded-lg" />
+            <input type="text" id="company" name="company" class="bg-gray-800 text-white p-4 rounded-lg" />
           </div>
           <div class="flex flex-col mt-6">
             <label for="message" class="text-lg font-medium mb-2">Mensaje Detallado</label>
-            <textarea id="message" name="message" class="bg-zinc-800 text-white p-4 rounded-lg h-32" required></textarea>
+            <textarea id="message" name="message" class="bg-gray-800 text-white p-4 rounded-lg h-32" required></textarea>
           </div>
           <button type="submit" class="bg-blue-500 text-white py-3 px-10 rounded-lg mt-8 w-full hover:bg-blue-400 transition duration-300">Enviar Mensaje</button>
         </form>
@@ -70,7 +70,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       </section>
 
       <!-- FAQ (Opcional) -->
-      <section class="bg-zinc-900 py-16 text-center">
+      <section class="bg-gray-900 py-16 text-center">
         <h2 class="text-4xl font-semibold text-blue-500 mb-8">Preguntas Frecuentes</h2>
         <div class="space-y-6 max-w-3xl mx-auto">
           <div>

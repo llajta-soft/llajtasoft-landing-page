@@ -1,13 +1,13 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
@@ -15,18 +15,24 @@ const posts = (await getCollection('blog')).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-zinc-950 text-white">
+  <body class="bg-gray-950 text-white">
     <Header />
     <main class="px-4 sm:px-6 lg:px-8 py-16">
       <section>
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {
             posts.map((post) => (
-              <li class="bg-zinc-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+              <li class="bg-gray-800 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
                 <a href={`/blog/${post.id}/`} class="block">
-                  <img class="w-full h-64 object-cover" src={post.data.heroImage} alt={post.data.title} />
+                  <img
+                    class="w-full h-64 object-cover"
+                    src={post.data.heroImage}
+                    alt={post.data.title}
+                  />
                   <div class="p-6">
-                    <h4 class="text-xl font-semibold text-blue-500">{post.data.title}</h4>
+                    <h4 class="text-xl font-semibold text-blue-500">
+                      {post.data.title}
+                    </h4>
                     <p class="text-gray-400 text-sm mt-2">
                       <FormattedDate date={post.data.pubDate} />
                     </p>
@@ -39,5 +45,7 @@ const posts = (await getCollection('blog')).sort(
       </section>
     </main>
     <Footer />
+
+   
   </body>
 </html>
