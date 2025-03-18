@@ -1,6 +1,7 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-  (function () {
+export function initializeAnimation() {
+  if (typeof document === 'undefined') return; // Solo ejecutar en el cliente
+  
+  document.addEventListener("DOMContentLoaded", function () {
     var width,
       height,
       largeHeader,
@@ -21,9 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
       target = { x: width / 2, y: height / 2 };
 
       largeHeader = document.getElementById("large-header");
+      if (!largeHeader) return;
+      
       largeHeader.style.height = height + "px";
 
       canvas = document.getElementById("demo-canvas");
+      if (!canvas) return;
+      
       canvas.width = width;
       canvas.height = height;
       ctx = canvas.getContext("2d");
@@ -209,5 +214,5 @@ document.addEventListener("DOMContentLoaded", function () {
     function getDistance(p1, p2) {
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
-  })();
-});
+  });
+}

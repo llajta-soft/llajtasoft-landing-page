@@ -533,6 +533,9 @@ import Carrusel from "../components/Carrusel.astro";
       </div>
     </section>
     <Footer />
-    <script src="./animate.js"></script>
+    <script>
+      import { initializeAnimation } from '../scripts/animate.js';
+      initializeAnimation();
+    </script>
   </body>
 </html>

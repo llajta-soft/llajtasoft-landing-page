@@ -131,8 +131,18 @@ const services = [
     </button>
   </div>
 </div>
+---
+// Importa cualquier componente o recurso necesario aquí
+---
 
-<script>
+<div id="carousel" class="carousel-container">
+  <!-- Contenido del carrusel -->
+</div>
+<button id="prev-btn">Anterior</button>
+<button id="next-btn">Siguiente</button>
+
+<script client:only>
+  // Tu código JavaScript aquí
   const carousel = document.getElementById("carousel");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
