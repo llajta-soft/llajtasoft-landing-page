@@ -5,6 +5,7 @@ import AnimateLogos from "../components/AnimateLogos.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Carrusel from "../components/Carrusel.astro";
+import LogoSlider from "../components/LogoSlider.astro";
 ---
 
 <!doctype html>
@@ -15,7 +16,7 @@ import Carrusel from "../components/Carrusel.astro";
 
   <body class="">
     <div id="large-header" class="cover overflow-hidden relative h-screen">
-      <Header  />
+      <Header />
       <canvas id="demo-canvas" class=""> </canvas>
 
       <div class="absolute z-10 left-0 top-30 w-full text-white px-2 md:px-16">
@@ -38,7 +39,7 @@ import Carrusel from "../components/Carrusel.astro";
               Acelera el crecimiento de tu empresa con
 
               <span
-                class="bg-gradient-to-r font-extrabold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="bg-gradient-to-r font-extrabold text-white"
               >
                 software</span
               >
@@ -55,18 +56,277 @@ import Carrusel from "../components/Carrusel.astro";
         </div>
       </div>
     </div>
-    <section class="text-center bg-gray-950 py-16">
-      <h2 class="text-3xl font-semibold mb-4 text-white">Nuestros Servicios</h2>
+
+    <section
+      class="text-center bg-radial-[at_50%_75%] from-blue-950 via-gray-900 to-gray-900 to-90% p-24 px-2 md:px-16"
+    >
+      <h2 class="text-3xl font-semibold mb-4 text-white">
+        Acelera el Crecimiento de tu Empresa con Software
+      </h2>
       <p class="text-center text-gray-400 pb-4">
-        Transformamos tu negocio con soluciones innovadoras, escalables y
-        personalizadas en desarrollo web, móvil y de escritorio. ¡Déjanos
-        ayudarte a crecer!
+        El software a medida transforma tu negocio, optimiza procesos y acelera
+        su crecimiento.
       </p>
-      <Carrusel  />
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+        <!-- Optimización de Procesos -->
+        <div class="flex flex-col items-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2654/2654594.png"
+            alt="Optimización de procesos"
+            class="w-16 h-16 object-cover mb-4"
+          />
+          <h3 class="text-xl font-semibold text-white">
+            Optimiza tus Procesos
+          </h3>
+          <p class="text-gray-400">
+            Automatiza tareas y enfócate en lo que impulsa tu empresa.
+          </p>
+        </div>
+        <!-- Toma de Decisiones Inteligentes -->
+        <div class="flex flex-col items-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/8439/8439018.png"
+            alt="Toma de decisiones"
+            class="w-16 h-16 object-cover mb-4"
+          />
+          <h3 class="text-xl font-semibold text-white">
+            Decisiones Inteligentes
+          </h3>
+          <p class="text-gray-400">
+            Accede a datos en tiempo real para decisiones efectivas.
+          </p>
+        </div>
+        <!-- Escalabilidad sin Límites -->
+        <div class="flex flex-col items-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/858/858699.png"
+            alt="Escalabilidad"
+            class="w-16 h-16 object-cover mb-4"
+          />
+          <h3 class="text-xl font-semibold text-white">
+            Escalabilidad sin Límites
+          </h3>
+          <p class="text-gray-400">
+            A medida que creces, el software se adapta a tus necesidades.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Nuestros Servicios -->
-    <section class="text-center bg-gray-950 py-16">
+
+<!-- SERVICIOS -->
+<section class="py-20 px-4 relative overflow-hidden bg-gradient-to-tr from-gray-950 via-gray-800 to-gray-700">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+  </div>
+  
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16 relative">
+      <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase bg-blue-400/10 rounded-full mb-4">Servicios Profesionales</span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Nuestros Servicios</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"></div>
+      <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+        Ofrecemos soluciones a medida para empresas de todos los tamaños. Desde aplicaciones móviles hasta software de escritorio, podemos ayudarte a transformar tu negocio.
+      </p>
+    </div>
+
+    <!-- Services cards -->
+    <div class="space-y-16">
+      <!-- Desarrollo Web -->
+      <div class="group bg-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-gray-800 border border-gray-800 hover:border-blue-500/30">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-8 flex flex-col justify-center md:order-first">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-500/20 text-white mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-white transition-colors duration-300">Desarrollo Web</h3>
+            </div>
+            
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Diseñamos y desarrollamos sitios web personalizados, rápidos, responsivos y adaptados a las necesidades de tu negocio, asegurando una excelente experiencia de usuario en cualquier dispositivo.
+            </p>
+            
+            <ul class="text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Diseño web responsivo
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Desarrollo de sitios estáticos y dinámicos
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Integración con eCommerce y CMS
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                SEO y optimización para motores de búsqueda
+              </li>
+            </ul>
+            
+            <div class="p-4 bg-gray-800/50 rounded-xl">
+              <p class="text-gray-400 text-sm">
+                Tecnologías utilizadas: <span class="text-white font-medium">HTML5, CSS3, JavaScript, React, Next.js, Laravel, Node.js, MongoDB</span>
+              </p>
+            </div>
+          </div>
+          
+          <div class="relative h-64 md:h-auto overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/a6/a9/8f/a6a98f41a9ff5c7243bb2b3dc8582d65.jpg"
+              alt="Desarrollo Web"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desarrollo de Escritorio -->
+      <div class="group bg-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-gray-800 border border-gray-800 hover:border-purple-500/30">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="relative h-64 md:h-auto overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/db/3b/d5/db3bd50218eeeb1173b353effe1773b7.jpg"
+              alt="Desarrollo de Escritorio"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70"></div>
+          </div>
+          
+          <div class="p-8 flex flex-col justify-center">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-500/20 text-purple-400 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Desarrollo de Escritorio</h3>
+            </div>
+            
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Creamos aplicaciones de escritorio robustas y escalables para empresas que requieren soluciones personalizadas y de alto rendimiento para procesos internos.
+            </p>
+            
+            <ul class="text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Desarrollo de software para Windows, macOS y Linux
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Integración de bases de datos locales y remotas
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Interfaz gráfica de usuario amigable y fácil de usar
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Automatización de procesos y flujos de trabajo
+              </li>
+            </ul>
+            
+            <div class="p-4 bg-gray-800/50 rounded-xl">
+              <p class="text-gray-400 text-sm">
+                Tecnologías utilizadas: <span class="text-purple-400 font-medium">Electron.js, SQLite, PostgreSQL</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desarrollo Móvil -->
+      <div class="group bg-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-gray-800 border border-gray-800 hover:border-teal-500/30">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-8 flex flex-col justify-center md:order-first">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-teal-500/20 text-teal-400 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white group-hover:text-teal-400 transition-colors duration-300">Desarrollo Móvil</h3>
+            </div>
+            
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Creamos aplicaciones móviles personalizadas para Android e iOS, optimizadas para ofrecer una experiencia excepcional a los usuarios. Ya sea que necesites una app sencilla o un sistema más complejo, tenemos la solución ideal.
+            </p>
+            
+            <ul class="text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Desarrollo nativo para Android e iOS
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Integración con APIs y servicios en la nube
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Optimización de rendimiento y UX/UI
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Soporte para dispositivos móviles, tablets y wearables
+              </li>
+            </ul>
+            
+            <div class="p-4 bg-gray-800/50 rounded-xl">
+              <p class="text-gray-400 text-sm">
+                Tecnologías utilizadas: <span class="text-teal-400 font-medium">Flutter, React Native, Swift, Kotlin, Firebase, API REST</span>
+              </p>
+            </div>
+          </div>
+          
+          <div class="relative h-64 md:h-auto overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/d5/a9/64/d5a9646669127ebe7f7a5e40e024142c.jpg"
+              alt="Desarrollo Móvil"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<!-- 
+    <section
+      class="text-center bg-radial-[at_50%_75%] from-gray-800 via-gray-950 to-gray-950 to-90% py-16"
+    >
       <h2 class="text-3xl font-semibold mb-4 text-white">Nuestros Servicios</h2>
       <p class="text-center text-gray-400 pb-4">
         Transformamos tu negocio con soluciones innovadoras, escalables y
@@ -74,7 +334,20 @@ import Carrusel from "../components/Carrusel.astro";
         ayudarte a crecer!
       </p>
       <Carrusel />
-    </section>
+    </section> -->
+
+    <!-- Nuestros Servicios -->
+    <!-- <section
+      class="text-center bg-radial-[at_90%_75%] from-gray-800 via-gray-950 to-gray-950 to-10% py-16"
+    >
+      <h2 class="text-3xl font-semibold mb-4 text-white">Nuestros Servicios</h2>
+      <p class="text-center text-gray-400 pb-4">
+        Transformamos tu negocio con soluciones innovadoras, escalables y
+        personalizadas en desarrollo web, móvil y de escritorio. ¡Déjanos
+        ayudarte a crecer!
+      </p>
+      <Carrusel />
+    </section> -->
 
     <!-- NUEVA SECCIÓN: Nuestros Proyectos -->
     <section
@@ -84,7 +357,7 @@ import Carrusel from "../components/Carrusel.astro";
         <h2 class="text-3xl font-semibold mb-8 text-white">
           Nuestros
           <span
-            class="bg-gradient-to-r font-extrabold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+            class="bg-gradient-to-r font-extrabold text-white"
           >
             Proyectos
           </span>
@@ -113,7 +386,7 @@ import Carrusel from "../components/Carrusel.astro";
               </p>
               <a
                 href="#"
-                class="inline-block mt-4 text-blue-500 hover:text-blue-400 font-semibold"
+                class="inline-block mt-4 text-blue-500 hover:text-white font-semibold"
               >
                 Conoce más
               </a>
@@ -138,7 +411,7 @@ import Carrusel from "../components/Carrusel.astro";
               </p>
               <a
                 href="#"
-                class="inline-block mt-4 text-blue-500 hover:text-blue-400 font-semibold"
+                class="inline-block mt-4 text-blue-500 hover:text-white font-semibold"
               >
                 Conoce más
               </a>
@@ -163,7 +436,7 @@ import Carrusel from "../components/Carrusel.astro";
               </p>
               <a
                 href="#"
-                class="inline-block mt-4 text-blue-500 hover:text-blue-400 font-semibold"
+                class="inline-block mt-4 text-blue-500 hover:text-white font-semibold"
               >
                 Conoce más
               </a>
@@ -186,7 +459,7 @@ import Carrusel from "../components/Carrusel.astro";
         <h2 class="text-3xl font-semibold mb-6 text-white">
           ¿Por qué elegir
           <span
-            class="bg-gradient-to-r font-extrabold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+            class="bg-gradient-to-r font-extrabold text-white"
           >
             Llajtasoft
           </span>?
@@ -201,7 +474,7 @@ import Carrusel from "../components/Carrusel.astro";
             class="bg-gray-800 bg-opacity-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
           >
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-blue-800 rounded-full flex items-center justify-center"
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-950 to-blue-800 rounded-full flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,9 +493,9 @@ import Carrusel from "../components/Carrusel.astro";
             </div>
             <h3 class="text-white text-xl font-semibold mb-2">Experiencia</h3>
             <p class="text-zinc-400">
-              Con más de <span class="text-blue-400 font-semibold">5 años</span>
+              Con más de <span class="text-white font-semibold">5 años</span>
               de trayectoria y
-              <span class="text-blue-400 font-semibold">100+ proyectos</span> exitosos.
+              <span class="text-white font-semibold">100+ proyectos</span> exitosos.
             </p>
           </div>
 
@@ -230,7 +503,7 @@ import Carrusel from "../components/Carrusel.astro";
             class="bg-gray-800 bg-opacity-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
           >
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-blue-800 rounded-full flex items-center justify-center"
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-950 to-blue-800 rounded-full flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +523,7 @@ import Carrusel from "../components/Carrusel.astro";
             <h3 class="text-white text-xl font-semibold mb-2">Innovación</h3>
             <p class="text-zinc-400">
               Soluciones <span
-                class="bg-gradient-to-r font-semibold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="bg-gradient-to-r font-semibold text-white"
                 >tecnológicas</span
               > de vanguardia para cada desafío empresarial.
             </p>
@@ -260,7 +533,7 @@ import Carrusel from "../components/Carrusel.astro";
             class="bg-gray-800 bg-opacity-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300"
           >
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-blue-800 rounded-full flex items-center justify-center"
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-950 to-blue-800 rounded-full flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +551,7 @@ import Carrusel from "../components/Carrusel.astro";
             </div>
             <h3 class="text-white text-xl font-semibold mb-2">Agilidad</h3>
             <p class="text-zinc-400">
-              Metodología <span class="text-blue-400 font-semibold"
+              Metodología <span class="text-white font-semibold"
                 >100% ágil</span
               > que garantiza resultados rápidos y eficientes.
             </p>
@@ -286,8 +559,8 @@ import Carrusel from "../components/Carrusel.astro";
         </div>
 
         <a
-          href="#servicios"
-          class="group inline-flex items-center text-blue-500 hover:text-blue-400 transition-all duration-300 font-semibold"
+          href="/servicios"
+          class="group inline-flex items-center text-blue-500 hover:text-white transition-all duration-300 font-semibold"
         >
           Explora nuestros servicios
           <svg
@@ -315,7 +588,7 @@ import Carrusel from "../components/Carrusel.astro";
         <h2 class="text-3xl font-semibold mb-8">
           Lo que dicen nuestros
           <span
-            class="bg-gradient-to-r font-extrabold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+            class="bg-gradient-to-r font-extrabold text-white"
           >
             clientes
           </span>
@@ -342,7 +615,7 @@ import Carrusel from "../components/Carrusel.astro";
 
             <div class="flex items-center mb-4">
               <div
-                class="h-12 w-12 rounded-full bg-gradient-to-br from-pink-500 to-blue-800 flex items-center justify-center text-white font-bold mr-4"
+                class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-950 to-blue-800 flex items-center justify-center text-white font-bold mr-4"
               >
                 TS
               </div>
@@ -355,7 +628,7 @@ import Carrusel from "../components/Carrusel.astro";
             <p class="italic mb-4 text-zinc-300">
               "Llajtasoft transformó nuestras ideas en
               <span
-                class="bg-gradient-to-r font-semibold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="bg-gradient-to-r font-semibold text-white"
               >
                 soluciones prácticas
               </span>
@@ -387,7 +660,7 @@ import Carrusel from "../components/Carrusel.astro";
 
             <div class="flex items-center mb-4">
               <div
-                class="h-12 w-12 rounded-full bg-gradient-to-br from-pink-500 to-blue-800 flex items-center justify-center text-white font-bold mr-4"
+                class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-950 to-blue-800 flex items-center justify-center text-white font-bold mr-4"
               >
                 EC
               </div>
@@ -400,7 +673,7 @@ import Carrusel from "../components/Carrusel.astro";
             <p class="italic mb-4 text-zinc-300">
               "Gracias a la
               <span
-                class="bg-gradient-to-r font-semibold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="bg-gradient-to-r font-semibold text-white"
               >
                 plataforma personalizada
               </span>
@@ -414,9 +687,9 @@ import Carrusel from "../components/Carrusel.astro";
           </div>
         </div>
 
-        <a
+        <!-- <a
           href="#contacto"
-          class="group inline-flex items-center text-blue-500 hover:text-blue-400 transition-all duration-300 font-semibold"
+          class="group inline-flex items-center text-blue-500 hover:text-white transition-all duration-300 font-semibold"
         >
           Ver más testimonios
           <svg
@@ -432,7 +705,7 @@ import Carrusel from "../components/Carrusel.astro";
               stroke-width="2"
               d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>
-        </a>
+        </a> -->
       </div>
     </section>
 
@@ -455,7 +728,7 @@ import Carrusel from "../components/Carrusel.astro";
         <h2 class="text-3xl font-semibold mb-6">
           ¿Listo para comenzar tu
           <span
-            class="bg-gradient-to-r font-extrabold from-pink-500 to-blue-800 bg-clip-text text-transparent"
+            class="bg-gradient-to-r font-extrabold text-white"
           >
             proyecto
           </span>?
@@ -471,7 +744,7 @@ import Carrusel from "../components/Carrusel.astro";
           <div class="grid md:grid-cols-3 gap-4 mb-8">
             <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg">
               <div
-                class="text-3xl font-bold text-gradient bg-gradient-to-r from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="text-3xl font-bold text-gradient bg-gradient-to-r text-white"
               >
                 95%
               </div>
@@ -479,7 +752,7 @@ import Carrusel from "../components/Carrusel.astro";
             </div>
             <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg">
               <div
-                class="text-3xl font-bold text-gradient bg-gradient-to-r from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="text-3xl font-bold text-gradient bg-gradient-to-r text-white"
               >
                 2 sem
               </div>
@@ -487,7 +760,7 @@ import Carrusel from "../components/Carrusel.astro";
             </div>
             <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg">
               <div
-                class="text-3xl font-bold text-gradient bg-gradient-to-r from-pink-500 to-blue-800 bg-clip-text text-transparent"
+                class="text-3xl font-bold text-gradient bg-gradient-to-r text-white"
               >
                 24/7
               </div>
@@ -501,7 +774,7 @@ import Carrusel from "../components/Carrusel.astro";
         >
           <a
             href="#contacto"
-            class="group bg-gradient-to-r from-pink-500 to-blue-800 text-white py-3 px-8 rounded-full hover:shadow-lg hover:shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300 font-semibold"
+            class="group bg-blue-500 text-white py-3 px-8 rounded-full hover:shadow-lg hover:shadow-blue-950 transform hover:-translate-y-1 transition-all duration-300 font-semibold"
           >
             <span class="flex items-center">
               Comienza tu proyecto hoy
@@ -521,20 +794,13 @@ import Carrusel from "../components/Carrusel.astro";
             </span>
           </a>
 
-          <span class="text-zinc-500 px-4">o</span>
-
-          <a
-            href="#demo"
-            class="group border border-pink-500 text-pink-500 py-3 px-8 rounded-full hover:bg-pink-500/10 transform hover:-translate-y-1 transition-all duration-300 font-semibold"
-          >
-            <span class="flex items-center"> Solicita una demo gratuita </span>
-          </a>
+      
         </div>
       </div>
     </section>
     <Footer />
     <script>
-      import { initializeAnimation } from '../scripts/animate.js';
+      import { initializeAnimation } from "../scripts/animate.js";
       initializeAnimation();
     </script>
   </body>
